@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StorageService } from 'src/services/storage.service';
+import { StorageService } from '../../services/storage.service';
 import { HelperService } from '../../services/helper.service';
 @Component({
   selector: 'app-registro',
