@@ -1,13 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>recuperar</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-card>
+ 
+  <ion-item>
+    <ion-input label="Usuario" labelPlacement="stacked" placeholder="Ingresar usuario"></ion-input>
+  </ion-item>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">recuperar</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <ion-item>
+    <ion-label  label="Nueva Contraseña" position="stacked">Contraseña</ion-label>
+    <ion-input type="Password" placeholder="Ingresar contraseña"></ion-input>
+  </ion-item>
+
+</ion-card> 
+<ion-button expand="full">Restablecer</ion-button>
+<div class="ion-text-center" >
+  <ion-text color="white">.</ion-text>
+</div>

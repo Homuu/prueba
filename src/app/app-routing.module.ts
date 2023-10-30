@@ -23,11 +23,7 @@ const routes: Routes = [
   {
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
-  },
-  {
-    path: 'recuperar2',
-    loadChildren: () => import('./recuperar2/recuperar2.module').then( m => m.Recuperar2PageModule)
-  },
+  }
  
 
 ];

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BarcodeScanner } from 'capacitor-barcode-scanner';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { BarcodeScanner } from 'capacitor-barcode-scanner';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   resultadoScan:any='';
 
@@ -18,6 +19,10 @@ export class HomePage {
   async scan(){
     this.resultadoScan = (await  BarcodeScanner.scan()).code;
     console.log("Resultado scan",JSON.parse(this.resultadoScan));
+  }
+  
+  logout(){
+    this.router.navigateByUrl("login");
   }
 
 }

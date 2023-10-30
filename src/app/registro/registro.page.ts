@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StorageService } from '../../services/storage.service';
 import { HelperService } from '../../services/helper.service';
 @Component({
@@ -12,7 +13,8 @@ export class RegistroPage implements OnInit {
   
 
   constructor(    private storage:StorageService,
-                  private helper:HelperService) {
+                  private helper:HelperService,
+                  private router:Router) {
               
    }
 
@@ -29,13 +31,16 @@ export class RegistroPage implements OnInit {
       return;
     }
 
+    
+    
     var usuario = [{
-      correo:this.usuario,
-      contrasena:this.contrasena
+      usuario_verificado:this.usuario,
+      contrasena_verificada:this.contrasena
     }];
 
     this.storage.guardarUsuario(usuario);
     this.helper.showAlert("Usuario registrado correctamente.","Información");
+    this.router.navigateByUrl('login');
     
   }
 
