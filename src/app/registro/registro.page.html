@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true">
+  
+  <div class="ion-text-center">
+    <h1>Registro</h1>
+  </div>
+<ion-card>  
+ 
+    <ion-item>
+      <ion-input [(ngModel)]="usuario" label="Usuario" labelPlacement="stacked" placeholder="Ingresar usuario"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label [(ngModel)]="contrasena" label="Contraseña" position="stacked">Contraseña</ion-label>
+      <ion-input type="Password" placeholder="Ingresar contraseña"></ion-input>
+    </ion-item>
+   
+
+</ion-card>
+<ion-button (click)="registro()" expand="full">Registrarse</ion-button>
+
+
+</ion-content>
